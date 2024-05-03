@@ -1,0 +1,67 @@
+/*
+    Author: Mariam Maria
+    Theme: Foodie's order
+*/
+*{
+    margin:  0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    padding: 1%;
+    width:80%;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/* css for menu */
+
+.menu{
+    background-color: #F5EEE6;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: 153448;
+}
+
+.menu ul li a:hover{
+    color: 3C5B6F;
+}
+
+
+/* css for main content */
+.main-content{
+    background-color: FFF8E3;
+    padding: 3%;
+
+}
+.col-4{
+    width: 14%;
+    background-color: D1BB9E ;
+    margin : 1%;
+    padding: 2%;
+    float: left;
+}
+
+/* css for footer */
+.footer{
+    background-color: #E6A4B4;
+}
