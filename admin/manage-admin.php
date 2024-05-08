@@ -12,6 +12,11 @@
                                 echo $_SESSION['add'];
                                 unset($_SESSION['add']);
                         }
+                        if(isset($_SESSION['delete']))
+                        {
+                                echo $_SESSION['delete'];
+                                unset($_SESSION['delete']);
+                        }
 
                 ?>
                 <br/><br/>
@@ -52,7 +57,7 @@
                                                                 <td><?php echo $username; ?></td>
                                                                 <td>
                                                                 <a href=""class="btn-secondary">Update Admin</a>
-                                                                <a href=""class="btn-danger">Delete Admin</a>
+                                                                <a href="<?php echo SITEURL;?>admin/delete-admin.php?id=<?php echo $id;?>"class="btn-danger">Delete Admin</a>
                                                                 </td>
                                                         </tr>
 
@@ -63,7 +68,7 @@
                                                 }
                                         }
                                         else{
-                                                //we dont have
+                                                //we dont have data in database
                                         }
                                 }
                         ?>
