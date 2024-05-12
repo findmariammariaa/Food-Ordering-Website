@@ -1,61 +1,74 @@
-<?php include('partials/menu.php');?>
+<?php include('partials/menu.php'); ?>
+
 <div class="main-content">
-    <div class="wrapper"></div>
-    <h1>Add Admin</h1>
-    <br/><br/>
+    <div class="wrapper">
+        <h1>Add Admin</h1>
 
-    <?php
+        <br><br>
 
-        if(isset($_SESSION['add']))//checking whether the session is set or not
-        {
-            echo $_SESSION['add'];//adding session msg
-            unset($_SESSION['add']);//removing session msg
-        }
+        <?php 
+            if(isset($_SESSION['add'])) //Checking whether the SEssion is Set of Not
+            {
+                echo $_SESSION['add']; //Display the SEssion Message if SEt
+                unset($_SESSION['add']); //Remove Session Message
+            }
+        ?>
 
-    ?>
-    <br/><br/>
+        <form action="" method="POST">
 
-    <form action=""method="POST">
-        <table class="tbl-50">
-            <tr>
-                <td>Full Name</td>
-                <td>
-                    <input type="text" name="full_name" placeholder="Enter your name">
-                </td>
-            </tr>
-            <tr>
-                <td>Username</td>
-                <td>
-                    <input type="text" name="username" placeholder="Enter your username">
-                </td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td>
-                    <input type="password" name="password" placeholder="Enter your password">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="submit" value="Add Admin" class="btn-primary">
+            <table class="tbl-30">
+                <tr>
+                    <td>Full Name: </td>
+                    <td>
+                        <input type="text" name="full_name" placeholder="Enter Your Name">
+                    </td>
+                </tr>
 
-                </td>
-            </tr>
-        </table>
+                <tr>
+                    <td>Username: </td>
+                    <td>
+                        <input type="text" name="username" placeholder="Your Username">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password: </td>
+                    <td>
+                        <input type="password" name="password" placeholder="Your Password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Add Admin" class="btn-secondary">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+    </div>
 </div>
 
+<?php include('partials/footer.php'); ?>
 
-<?php include('partials/footer.php')?>
-<?php
-    //process the value from form and save it in database
-    //check whether the button is clicked or not
+
+<?php 
+    //Process the Value from Form and Save it in Database
+
+    //Check whether the submit button is clicked or not
+
     if(isset($_POST['submit']))
     {
+        // Button Clicked
+        //echo "Button Clicked";
 
-        //get the data from from
-        $full_name=$_POST['full_name'];
-        $username=$_POST['username'];
-        $password=md5($_POST['password']);//password encryption with md5
+        //1. Get the Data from form
+        $full_name = $_POST['full_name'];
+        $username = $_POST['username'];
+        $password = md5($_POST['password']); //Password Encryption with MD5
 
         if(empty($full_name) || empty($username) || empty($_POST['password'])) {
             // If any of the fields are empty, set an error message and redirect back to the form
@@ -64,31 +77,37 @@
             exit(); // Stop further execution of the script
         }
 
-        // sql query to save the data into database
-        $sql = "INSERT INTO tbl_admin
-         SET
+        
+        //2. SQL Query to Save the data into database
+        $sql = "INSERT INTO tbl_admin SET 
             full_name='$full_name',
             username='$username',
             password='$password'
         ";
-        //executing query and saving data into database
+ 
+        //3. Executing Query and Saving Data into Datbase
         $res = mysqli_query($conn, $sql) or die(mysqli_error());
-        //check whether the (query is executed)data is inserted or not and display apporpiate msg
-        if($res==TRUE){
-           // echo "Data inserted";
-            //create session variable to display msg
-            $_SESSION['add']="Admin added successfully";
-            //redirect page to manage admin
-            header("location:".SITEURL.'admin/manage-admin.php');
 
+        //4. Check whether the (Query is Executed) data is inserted or not and display appropriate message
+        if($res==TRUE)
+        {
+            //Data Inserted
+            //echo "Data Inserted";
+            //Create a Session Variable to Display Message
+            $_SESSION['add'] = "<div class='success'>Admin Added Successfully.</div>";
+            //Redirect Page to Manage Admin
+            header("location:".SITEURL.'admin/manage-admin.php');
         }
-        else{
-            //echo "FAiled to insert data";
-            //create session variable to display msg
-            $_SESSION['add']="Failed to add admin";
-            //redirect page to add admin
+        else
+        {
+            //FAiled to Insert DAta
+            //echo "Faile to Insert Data";
+            //Create a Session Variable to Display Message
+            $_SESSION['add'] = "<div class='error'>Failed to Add Admin.</div>";
+            //Redirect Page to Add Admin
             header("location:".SITEURL.'admin/add-admin.php');
-            
         }
+
     }
+    
 ?>
