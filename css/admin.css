@@ -2,6 +2,11 @@
     Author: Mariam Maria
     Theme: Foodie's order
 */
+/*css for login*/
+.login{
+    background-color: FFF8E3;
+    padding: 7%;
+}
 *{
     margin:  0;
     padding: 0;
@@ -95,10 +100,19 @@ table tr td{
     color: 3C5B6F;
 }
 
+.success{
+    color: green;
+    font-weight: bold;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
+
 /* css for main content */
 .main-content{
     background-color: FFF8E3;
-    padding: 3%;
+    padding: 4%;
 
 }
 .col-4{
@@ -109,9 +123,15 @@ table tr td{
     float: left;
 }
 
+
 /* css for footer */
 .footer{
     background-color: 638889;
     color: white;
     text-decoration-color: white;
+}
+/*text box size*/
+.wide-input {
+    width: 150px; /* Adjust width as needed */
+    height: 25px;
 }
