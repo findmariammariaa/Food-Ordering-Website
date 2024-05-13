@@ -18,7 +18,7 @@
         //Query Executed Successully and Admin Deleted
         //echo "Admin Deleted";
         //Create SEssion Variable to Display Message
-        $_SESSION['delete'] = "<div class='success'>Admin Deleted Successfully.</div>";
+        $_SESSION['delete'] = "<span style='color: green;font-weight:bold'>Admin deleted successfully</span>";
         //Redirect to Manage Admin Page
         header('location:'.SITEURL.'admin/manage-admin.php');
     }
@@ -27,7 +27,7 @@
         //Failed to Delete Admin
         //echo "Failed to Delete Admin";
 
-        $_SESSION['delete'] = "<div class='error'>Failed to Delete Admin. Try Again Later.</div>";
+        $_SESSION['delete'] = "<span style='color: red;'>Failed to Delete Admin. Try Again Later.</span>";
         header('location:'.SITEURL.'admin/manage-admin.php');
     }
 

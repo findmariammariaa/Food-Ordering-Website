@@ -1,5 +1,7 @@
 
-<?php include('../config/constants.php');?>
+<?php 
+    include('../config/constants.php');
+?>
 <html>
     <head>
         <title>Foodie's Order - Home Page</title>

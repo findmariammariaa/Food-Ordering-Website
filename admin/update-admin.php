@@ -96,14 +96,14 @@
         if($res==true)
         {
             //Query Executed and Admin Updated
-            $_SESSION['update'] = "<div class='success'>Admin Updated Successfully.</div>";
+            $_SESSION['update'] = "<span style='color: green;font-weight:bold''>Admin updated successfully</span>";
             //Redirect to Manage Admin Page
             header('location:'.SITEURL.'admin/manage-admin.php');
         }
         else
         {
             //Failed to Update Admin
-            $_SESSION['update'] = "<div class='error'>Failed to update Admin.</div>";
+            $_SESSION['update'] = "<span style='color: green;font-weight:bold''>Failed to update admin. Try again later.</span>";
             //Redirect to Manage Admin Page
             header('location:'.SITEURL.'admin/manage-admin.php');
         }
