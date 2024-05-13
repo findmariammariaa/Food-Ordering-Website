@@ -16,7 +16,7 @@
         
             <table class="tbl-30">
                 <tr>
-                    <td>Current Password: </td>
+                    <td>Current Password:</td>
                     <td>
                         <input type="password" name="current_password" placeholder="Current Password">
                     </td>
@@ -30,7 +30,7 @@
                 </tr>
 
                 <tr>
-                    <td>Confirm Password: </td>
+                    <td>Confirm Password:</td>
                     <td>
                         <input type="password" name="confirm_password" placeholder="Confirm Password">
                     </td>
@@ -97,7 +97,7 @@
                             {
                                 //Display Succes Message
                                 //REdirect to Manage Admin Page with Success Message
-                                $_SESSION['change-pwd'] = "<div class='success'>Password Changed Successfully. </div>";
+                                $_SESSION['change-pwd'] = "<span style='color: green;font-weight: bold;'>Password changed successfully. </span>";
                                 //Redirect the User
                                 header('location:'.SITEURL.'admin/manage-admin.php');
                             }
@@ -105,7 +105,7 @@
                             {
                                 //Display Error Message
                                 //REdirect to Manage Admin Page with Error Message
-                                $_SESSION['change-pwd'] = "<div class='error'>Failed to Change Password. </div>";
+                                $_SESSION['change-pwd'] ="<span style='color: red;font-weight: bold;'>Failed to change password. </span>";
                                 //Redirect the User
                                 header('location:'.SITEURL.'admin/manage-admin.php');
                             }
@@ -113,7 +113,7 @@
                         else
                         {
                             //REdirect to Manage Admin Page with Error Message
-                            $_SESSION['pwd-not-match'] = "<div class='error'>Password Did not Patch. </div>";
+                            $_SESSION['pwd-not-match'] = "<span style='color: red;font-weight: bold;'>Password didn't match. </span>";
                             //Redirect the User
                             header('location:'.SITEURL.'admin/manage-admin.php');
 
@@ -122,7 +122,7 @@
                     else
                     {
                         //User Does not Exist Set Message and REdirect
-                        $_SESSION['user-not-found'] = "<div class='error'>User Not Found. </div>";
+                        $_SESSION['user-not-found'] = "<span style='color: red;font-weight: bold;'>User not found. </span>";
                         //Redirect the User
                         header('location:'.SITEURL.'admin/manage-admin.php');
                     }

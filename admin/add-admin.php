@@ -78,7 +78,7 @@
         if($res==TRUE){
            // echo "Data inserted";
             //create session variable to display msg
-            $_SESSION['add']="<span style='color: green;font-weight:bold''>Admin added successfully</span>";
+            $_SESSION['add']="<span style='color: green;font-weight:bold'>Admin added successfully</span>";
             //redirect page to manage admin
             header("location:".SITEURL.'admin/manage-admin.php');
 
@@ -86,7 +86,7 @@
         else{
             //echo "FAiled to insert data";
             //create session variable to display msg
-            $_SESSION['add']="<span style='color: red;font-weight:bold''>Failed to add admin</span>";
+            $_SESSION['add']="<span style='color: red;font-weight:bold'>Failed to add admin</span>";
             //redirect page to add admin
             header("location:".SITEURL.'admin/add-admin.php');
             
