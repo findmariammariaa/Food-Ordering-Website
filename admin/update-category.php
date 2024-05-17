@@ -32,7 +32,7 @@
                 else
                 {
                     // If no category found with the given ID, redirect with an error message
-                    $_SESSION['no-category-found'] = "<div class='error'>Category not Found.</div>";
+                    $_SESSION['no-category-found'] = "<div class='error'>Category not found.</div>";
                     header('location:'.SITEURL.'admin/manage-category.php');
                 }
             }
@@ -159,12 +159,12 @@
                 // Redirect with success or error message
                 if($res2==true)
                 {
-                    $_SESSION['update'] = "<div class='success'>Category Updated Successfully.</div>";
+                    $_SESSION['update'] = "<div class='success'>Category updated successfully.</div>";
                     header('location:'.SITEURL.'admin/manage-category.php');
                 }
                 else
                 {
-                    $_SESSION['update'] = "<div class='error'>Failed to Update Category.</div>";
+                    $_SESSION['update'] = "<div class='error'>Failed to update category.</div>";
                     header('location:'.SITEURL.'admin/manage-category.php');
                 }
             }
