@@ -22,7 +22,8 @@
                     <li><a href="manage-admin.php">Admin</a></li>
                     <li><a href="manage-category.php">Category</a></li>
                     <li><a href="manage-food.php">Food</a></li>
-                    <li><a href="manage-order.php">Order</a></li>
+                    <li><a href="manage-order.php">Orders</a></li>
+                    <li><a href="../index.php">Website</a></li>
                     <li><a href="logout.php">Logout</a></li>
                  </ul>
             </div>

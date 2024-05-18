@@ -16,20 +16,19 @@
     <section class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="#" title="Logo1">
+                <a>
                     <img src="images/logo1.png"alt="Restaurant Logo" class="img-responsive">
                 </a>
     
             </div>
             <div class="logo">
-                <a href="#" title="Logo2">
+                <a>
                     <img src="images/logo2.png"alt="Restaurant Logo" class="img-responsive">
                 </a>
-    
             </div>
             <br/><br/>
             <div class="logo">
-                <a href="#" title="Logo3">
+                <a>
                     <img src="images/logo3.png"alt="Restaurant Logo" class="img-responsive" line-height: 180px;>
                 </a>
     
