@@ -15,7 +15,7 @@
 
     <body>
         <!--Menu section starts -->
-        <div class="menu text-center">
+        <div class="menu text-center" >
             <div class="wrapper">
                 <ul>
                     <li><a href="index.php">Home</a></li>

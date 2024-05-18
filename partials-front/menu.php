@@ -16,8 +16,6 @@
     <section class="navbar">
         <div class="container">
             <div class="logo">
-            </div>
-            <div class="logo">
                 <a href="#" title="Logo1">
                     <img src="images/logo1.png"alt="Restaurant Logo" class="img-responsive">
                 </a>
@@ -53,7 +51,7 @@
                         <a href="<?php echo SITEURL; ?>foods.php">Foods</a>
                     </li>
                     <li>
-                        <a href="<?php echo SITEURL; ?>">Contact</a>
+                        <a href="https://www.linkedin.com/in/findmariammariaa/">Contact</a>
                     </li>
                 </ul>
             </div>
