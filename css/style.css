@@ -1,7 +1,6 @@
-/* 
-    Author: Vijay Thapa;
-    Theme: Restaurant Food Order;
-    version: 1.0;
+/*
+    Author: Mariam Maria
+    Theme: Foodie's order
 */
 
 /* CSS for All */
@@ -41,11 +40,11 @@
 }
 
 a{
-    color: #ff6b81;
+    color: #638889;
     text-decoration: none;
 }
 a:hover{
-    color: #ff4757;
+    color: #99BC85;
 }
 
 .btn{
@@ -55,7 +54,7 @@ a:hover{
     border-radius: 5px;
 }
 .btn-primary{
-    background-color: #ff6b81;
+    background-color: #638889;
     color: white;
     cursor: pointer;
 }
@@ -89,28 +88,33 @@ fieldset{
 
 /* CSSS for navbar section */
 
+
 .logo{
-    width: 10%;
+    width: 15%;
     float: left;
+    max-width: 100px; /* Adjust the max-width of the logos */
+    display:flex;
 }
 .menu{
-    line-height: 60px;
+    line-height: 40px;
 }
 .menu ul{
     list-style-type: none;
+    
 }
 
 .menu ul li{
     display: inline;
     padding: 1%;
     font-weight: bold;
+    font-size: larger;
 }
 
 
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

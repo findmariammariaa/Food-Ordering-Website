@@ -112,7 +112,7 @@
                                         {
                                             // Display the image
                                             ?>
-                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" width=250 height=300>
+                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" width=250 height=250>
                                             <?php
                                         }
                                         else
