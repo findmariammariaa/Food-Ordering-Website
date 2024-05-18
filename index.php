@@ -24,7 +24,7 @@
 <!-- CAtegories Section Starts Here -->
 <section class="categories">
     <div class="container">
-        <h2 class="text-center">Explore Foods</h2>
+        <h2 class="text-center">Explore Categories</h2>
 
         <?php 
             //Create SQL Query to Display CAtegories from Database
@@ -139,7 +139,7 @@
 
                     <div class="food-menu-desc">
                         <h4><?php echo $title; ?></h4>
-                        <p class="food-price">$<?php echo $price; ?></p>
+                        <p class="food-price">BDT <?php echo $price; ?></p>
                         <p class="food-detail">
                             <?php echo $description; ?>
                         </p>

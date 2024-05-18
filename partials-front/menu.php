@@ -40,6 +40,9 @@
 
             <div class="menu text-right">
                 <ul>
+                <li>
+                        <a href="<?php echo SITEURL; ?>admin/manage-food.php">Admin</a>
+                    </li>
                     <li>
                         <a href="<?php echo SITEURL; ?>">Home</a>
                     </li>

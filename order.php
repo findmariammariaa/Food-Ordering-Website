@@ -2,7 +2,7 @@
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search">
-        <div class="container">
+        <div class="container text-white">
             
             <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
 
