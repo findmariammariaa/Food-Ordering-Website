@@ -3,15 +3,7 @@
 <div class="main-content">
     <div class="wrapper">
         <h1>Manage Food</h1>
-
-        <br /><br />
-
-                <!-- Button to Add food -->
-                <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary">Add Food</a>
-
-                <br /><br />
-
-                <?php 
+        <?php 
                     if(isset($_SESSION['add']))
                     {
                         echo $_SESSION['add'];
@@ -43,6 +35,14 @@
                     }
                 
                 ?>
+                <br />
+
+                <!-- Button to Add food -->
+                <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary">Add Food</a>
+
+                <br /><br />
+
+              
 
                 <table class="tbl-full">
                     <tr>
