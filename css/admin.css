@@ -8,7 +8,7 @@
     padding: 7%;
 }
 *{
-    margin:  0;
+    margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -113,10 +113,16 @@ table tr td{
 /* css for main content */
 .main-content{
     background-color: #FFF8E3;
-    padding: 0%;
-
-
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
+.fullscreen{
+    height:100%;
+    width:100%;
+}
+
 .col-4{
     width: 14%;
     background-color: D1BB9E ;
@@ -131,6 +137,7 @@ table tr td{
     background-color: 638889;
     color: white;
     text-decoration-color: white;
+    flex-shrink: 0;
 }
 /*text box size*/
 .wide-input {

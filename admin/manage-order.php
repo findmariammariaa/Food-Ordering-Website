@@ -12,6 +12,11 @@
                         echo $_SESSION['update'];
                         unset($_SESSION['update']);
                     }
+                    if(isset($_SESSION['deleted']))
+                    {
+                        echo $_SESSION['deleted'];
+                        unset($_SESSION['deleted']);
+                    }
                 ?>
                 <br><br>
                 <style>
@@ -21,7 +26,7 @@
 
                 .tbl-full th,
                 .tbl-full td {
-                        padding: 18px; /* Adjust padding as needed */
+                        padding: 15px; /* Adjust padding as needed */
                         text-align: left; /* Adjust text alignment as needed */
                 }
 
@@ -110,7 +115,43 @@
                                         <td><?php echo $customer_email; ?></td>
                                         <td><?php echo $customer_address; ?></td>
                                         <td>
+
+                                            <?php 
+                                            if($status=="Delivered" || $status=="Cancelled")
+                                            { 
+                                                ?><a href="<?php echo SITEURL; ?>admin/delete-order.php?id=<?php echo $id?>" class="btn-danger">Delete</a><br>
+                                                <?php
+                                            }
+                                            
+                                            if(isset($_POST['Delete']))
+                                            {
+                                                $id=$_POST['id'];
+                                                $sql = "DELETE * FROM tbl_order WHERE id=$id" ;
+                                                $res = mysqli_query($conn, $sql);
+                                                if($res2==true)
+                                                {
+                                                    //Display Succes Message
+                                                    //REdirect to Manage Admin Page with Success Message
+                                                    $_SESSION['deleted'] = "<span style='color: green;font-weight: bold;'>Order deleted successfully. </span>";
+                                                    //Redirect the User
+                                                    header('location:'.SITEURL.'admin/manage-order.php');
+                                                }
+                                                else
+                                                {
+                                                    //Display Error Message
+                                                    //REdirect to Manage Admin Page with Error Message
+                                                    $_SESSION['deleted'] ="<span style='color: red;font-weight: bold;'>Failed to delete order. </span>";
+                                                    //Redirect the User
+                                                    header('location:'.SITEURL.'admin/manage-order.php');
+                                                }
+                                            }
+                                            ?>
                                             <a href="<?php echo SITEURL; ?>admin/update-order.php?id=<?php echo $id; ?>" class="btn-secondary">Update</a>
+
+
+ 
+
+                                           
                                         </td>
                                     </tr>
 

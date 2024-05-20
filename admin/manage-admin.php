@@ -2,7 +2,7 @@
 
 
         <!-- Main Content Section Starts -->
-        <div class="main-content">
+        <div class="main-content fullscreen">
             <div class="wrapper">
                 <h1>Manage Admin</h1>
 

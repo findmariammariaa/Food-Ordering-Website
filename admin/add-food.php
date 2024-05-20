@@ -111,6 +111,13 @@ include('partials/menu.php');
                     exit();
                 }
 
+                // Check if the description exceeds the maximum length
+                if(strlen($description) > 1000) {
+                    $_SESSION['add'] = "<span style='color: red;font-weight:bold'>Description is too long.</span>";
+                    header("location:".SITEURL.'admin/add-food.php');
+                    exit();
+                }
+
                 // Check if an image is selected
                 if(isset($_FILES['image']['name'])) {
                     $image_name = $_FILES['image']['name'];

@@ -49,6 +49,7 @@
                         <th>S.N.</th>
                         <th>Title</th>
                         <th>Price</th>
+                        <th>Category</th>
                         <th>Image</th>
                         <th>Featured</th>
                         <th>Active</th>
@@ -57,7 +58,8 @@
 
                     <?php 
                         //Create a SQL Query to Get all the Food
-                        $sql = "SELECT * FROM tbl_food";
+                        $sql = "SELECT tbl_food.*, tbl_category.title as category_name FROM tbl_food, tbl_category
+                        WHERE tbl_food.category_id=tbl_category.id";
 
                         //Execute the qUery
                         $res = mysqli_query($conn, $sql);
@@ -78,6 +80,7 @@
                                 $id = $row['id'];
                                 $title = $row['title'];
                                 $price = $row['price'];
+                                $category = $row['category_name'];
                                 $image_name = $row['image_name'];
                                 $featured = $row['featured'];
                                 $active = $row['active'];
@@ -87,6 +90,7 @@
                                     <td><?php echo $sn++; ?>. </td>
                                     <td><?php echo $title; ?></td>
                                     <td><?php echo $price; ?> taka</td>
+                                    <td><?php echo $category; ?></td>
                                     <td>
                                         <?php  
                                             //CHeck whether we have image or not
@@ -108,6 +112,7 @@
                                     <td><?php echo $active; ?></td>
                                     <td>
                                         <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id; ?>" class="btn-secondary">Update Food</a>
+                                        <br><br>
                                         <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Food</a>
                                     </td>
                                 </tr>

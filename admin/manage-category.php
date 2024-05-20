@@ -128,6 +128,7 @@
                                 <td>
                                     <!-- Links to update and delete category -->
                                     <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
+                                    </br><br>
                                     <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
                                 </td>
                             </tr>

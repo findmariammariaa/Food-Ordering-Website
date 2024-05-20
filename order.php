@@ -163,6 +163,8 @@
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
                 </fieldset>
 
+            
+
             </form>
 
         </div>
