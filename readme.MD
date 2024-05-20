@@ -2,10 +2,10 @@
 ## 📊 Database Schema and ER Diagram
 
 - **Schema Diagram:**
-  ![Schema Diagram](images/schema-diagram.png)
+  ![Schema Diagram](images/schemadiagram.png)
 
 - **ER Diagram:**
-  ![ER Diagram](images/er-diagram.png)
+  ![ER Diagram](images/erdiagram.png)
 
 ## 📖 Project Overview
 
