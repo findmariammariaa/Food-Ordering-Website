@@ -1,4 +1,5 @@
 # 🥘 Food Order Website
+
 ## 📊 Database Schema and ER Diagram
 
 - **Schema Diagram:**
@@ -27,10 +28,9 @@ Explore a delicious world of cuisine with our Food Ordering Website. This projec
    - Manage admins, categories, and food items.
    - Manage and track food orders and delivery.
 
-## 📊 Database Schema and ER Diagram
+## 📽️ Demo Video
 
-- **Schema Diagram:** [Link or Image of the Schema Diagram]
-- **ER Diagram:** [Link or Image of the ER Diagram]
+Watch the demo video to see the Food Ordering Website in action: [YouTube Demo Video](https://www.youtube.com/watch?v=OgDw4qDq190)
 
 ## 📖 How to Download the Project and Run on Your PC?
 
@@ -44,6 +44,7 @@ Explore a delicious world of cuisine with our Food Ordering Website. This projec
 
 1. **Download the Project:**
    - Download as a Zip file or clone this project repository.
+
 2. **Move to Root Directory:**
    - Move the project folder to the XAMPP root directory:
      ```
@@ -83,3 +84,11 @@ Explore a delicious world of cuisine with our Food Ordering Website. This projec
      ```
      http://localhost/food-order/
      ```
+
+Feel free to reach out if you have any questions or need further assistance. Enjoy exploring the world of food ordering!
+
+---
+
+Connect with me on LinkedIn: [Mariam Maria](https://www.linkedin.com/in/findmariammariaa/)
+
+---
